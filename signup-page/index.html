@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up page</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <h1>Sign page</h1>
-    <p>This page is under construction</p>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- This section is for all acction field and inputs -->
+      <div class="info-view">
+        <div class="input-fields">
+          <!-- header -->
+          <div class="header">
+            <h2>Get Started Now</h2>
+          </div>
+
+          <!-- Sign up with input fields -->
+          <div class="inputs">
+            <label for="name">Name</label><br />
+            <input type="text" name="name" id="name" class="input" />
+
+            <label for="email">Email address</label><br />
+            <input type="email" name="email" id="email" class="input" />
+
+            <label for="password">Password</label><br />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="input"
+            />
+
+            <dev class="check">
+              <input type="checkbox" name="checkbox" id="checkbox" />
+              <p>I agree to the <a href="#">terms & policy</a></p>
+            </dev>
+
+            <input type="button" value="signup" class="input" id="button" />
+          </div>
+
+          <!-- separator -->
+          <div class="separator">Or</div>
+
+          <!-- Auth 2.0 system -->
+          <div class="auth-btn">
+            <div class="with-google"></div>
+            <div class="with-apple"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- This is section is for image view in large screen -->
+      <div class="img-view">
+        <img src="./assets/aesthetic.png" alt="" srcset="" />
+      </div>
+    </div>
 
     <script src="./script.js"></script>
-</body>
+  </body>
 </html>
