@@ -97,3 +97,4 @@ console.log(evenNumbers); // [2, 4]
 let numbersC = [1, 2, 3, 4];
 let sum = numbersC.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
 console.log(sum); // 10
+
