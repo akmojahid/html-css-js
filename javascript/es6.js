@@ -1,3 +1,4 @@
 let print = (value) => console.log(value)
 
-print(value)
+print('hello JS')
+print(102)
