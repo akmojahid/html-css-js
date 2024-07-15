@@ -16,3 +16,10 @@ function fuc(a, b) {
 
 let ar = arr.reduce(fuc)
 console.log(ar)
+
+const Car = {
+  name: 'Toyota Supra',
+  brand:'Toyota',
+  model: 'mk5',
+  origin:'Japan'
+}
