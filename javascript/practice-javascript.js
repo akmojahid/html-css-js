@@ -25,3 +25,4 @@ const Car = {
   price: 5000000,
   color: ['blue', 'black', 'white']
 }
+console.log(...car)
