@@ -21,5 +21,7 @@ const Car = {
   name: 'Toyota Supra',
   brand:'Toyota',
   model: 'mk5',
-  origin:'Japan'
+  origin:'Japan',
+  price: 5000000,
+  color: ['blue', 'black', 'white']
 }
