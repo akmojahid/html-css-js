@@ -22,7 +22,7 @@ const Car = {
   brand:'Toyota',
   model: 'mk5',
   origin:'Japan',
-  price: 5000000,
+  price: '96k',
   color: ['blue', 'black', 'white']
 }
 console.log(...car)
