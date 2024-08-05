@@ -1,2 +1,2 @@
 # # For practicing web technologies
-Hello world!
+Hello, world!
