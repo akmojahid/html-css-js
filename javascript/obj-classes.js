@@ -1,6 +1,7 @@
 class Dog {
   constructor(name) {
     this._name = name;
+    this.catagory = "Animal"
   }
   sayHi(msg) {
     console.log(msg);
