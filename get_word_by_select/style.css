@@ -1,75 +1,186 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-*{
-    margin:  0px;
-    padding: 0px;
-    font-family: "Poppins", sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* main container */
-.container{
-    width: 100vw;
-    height: 100vh;
+body {
+    background-color: #121212; /* Dark background for a nighttime feel */
+    font-family: 'Georgia', serif;
+    color: #f5f5f5; /* Light text for contrast */
     display: flex;
-    flex-direction: row;
+    justify-content: start;
     align-items: center;
-    align-items: center;
-    margin-left: 10%;
-}
-
-/* info view styles */
-.info-view{
-    width: 50vw;
-}
-
-.inputs{
     
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    /* padding: 22%; */
 }
-.input{
+#vocab-container {
+    max-width: 600px;
+    width: 100%;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+}
+p{padding: 20px;}
+
+.vocab-card {
+    position: absolute;
+    bottom: 0;
+    background-color: #ffffff;
+    border: 5px solid #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 10px;
+    max-height: 40vh; /* Set max height */
+    overflow-y: auto; /* Enable scroll if content overflows */
+    width: 100%; /* Full width of container */
+}
+ 
+.vocab-header {
+    text-align: center;
     margin-bottom: 15px;
-    padding:8px;
-    border: 1px solid #b6b6b6;
+}
+
+.vocab-word {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.vocab-translation {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.vocab-meaning {
+    font-size: 1rem;
+    color: #34495e;
+    background-color: #ecf0f1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.vocab-details {
+    margin-top: 10px;
+}
+
+.part-of-speech .tag {
+    background-color: #2980b9;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.synonyms {
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.synonyms .syn {
+    background-color: #95a5a6;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.examples {
+    background-color: #fdfdfd;
+    padding: 10px;
+    border-radius: 8px;
+    color: #001100;
+}
+
+.example {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+.phonetics {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #34495e;
+}
+#fetch-word{
+  width: 150px;
+  height: 30px auto;
+  border-radius: 5px;
+  padding: 10px;
+  border:none;
+}
+#fetch-word:active{
+  background-color: #f1f1f1;
+  border: 2px solid gray;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+.story-container {
+    border-radius: 10px;
+    max-width: 100vw;
+    line-height: 1.7;
+}
+
+.story-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc00; /* Gold color for title */
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.story-text {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #f0f0f0; /* Slightly lighter text for better readability */
+}
+
+.quote-section {
+    background-color: #333;
+    padding: 15px;
+    border-left: 5px solid #ffcc00;
+    margin: 20px 0;
+    font-style: italic;
+    font-size: 1.1rem;
     border-radius: 5px;
 }
 
-label{
-    font-size: smaller;
-    font-weight: 450;
-    color: black;
-    margin-bottom: -20px;
-}
-
-.check{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 15px;
-}
-.check p{
-    padding-left: 5px;
-    font-size: 12px;
-}
-
-/* separator */
-.separator{
-    width: 25vw;
+.quote {
+    color: #ffcc00;
     text-align: center;
-    font-size: small;
-    font-weight: bold;
-    margin-top: 50px;
 }
 
-.img-view{
-    width: 50%;
-    height: 100vh;
-    border: 5px solid black;
-    border-top-left-radius: 5px;
+.quote-author {
+    text-align: right;
+    color: #f0f0f0;
+    margin-top: 10px;
+    font-size: 1rem;
 }
-.img-view img{
-    border-bottom-left-radius: 10px;
-    width: 100%;
-    height: 100%;
+
+.story-text:last-child {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
 }
+
