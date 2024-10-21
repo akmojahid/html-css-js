@@ -1,2 +1,3 @@
 ## Hello there!
-This is just my practice folder, sometimes I write draft code to brainstorm idea
+## Project 1: Get words information on select for document
+
