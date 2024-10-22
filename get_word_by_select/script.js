@@ -113,6 +113,8 @@ function displayWordInfo(wordInfo) {
 
 
 document.addEventListener('selectionchange', function() {
+  event.preventDefault()
+  
   if (window.getSelection().toString() !== '') {
     // User has selected some text
     const selectedText = window.getSelection().toString();
