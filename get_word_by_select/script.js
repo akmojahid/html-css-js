@@ -83,7 +83,7 @@ function displayWordInfo(wordInfo) {
 
     const synonymsDiv = document.createElement('div');
     synonymsDiv.className = 'synonyms';
-    synonymsDiv.innerHTML = `<strong>Synonyms:</strong>`;
+    
     meaning.synonyms.forEach(syn => {
       const synSpan = document.createElement('span');
       synSpan.className = 'syn';
